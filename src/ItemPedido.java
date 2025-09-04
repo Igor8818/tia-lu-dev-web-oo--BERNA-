@@ -1,31 +1,24 @@
 public class ItemPedido {
     private ItemCardapio itemCardapio;
-    int quantidade;
-    double precoUnit;
+    private int quantidade;
+    private double precoUnit;
 
-    public ItemPedido(ItemCardapio item, double precoUnit, int quantidade) {
-        itemCardapio=item;
-        this.precoUnit = item.getPreco();
+    public ItemPedido(ItemCardapio item, int quantidade) {
+        this.itemCardapio = item;
         this.quantidade = quantidade;
+        this.precoUnit = item.getPreco();
     }
 
-    public ItemCardapio GetItemCardapio(){
-        return itemCardapio;
-    }
 
-    public double getPrecoUnit() {
-        return precoUnit;
-    }
-
-    public void setPrecoUnit(double precoUnit) {
-        this.precoUnit = precoUnit;
+    public ItemCardapio getItemCardapio() {
+        return this.itemCardapio;
     }
 
     public int getQuantidade() {
-        return quantidade;
+        return this.quantidade;
     }
 
-    public void setQuantidade(int quantidade) {
-        this.quantidade = quantidade;
+    public double getPrecoUnit() {
+        return this.precoUnit;
     }
 }

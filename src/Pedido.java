@@ -1,38 +1,37 @@
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Pedido {
     public int id;
     public LocalDate data;
-    public String Status;
-
+    public String status;
+    private List<ItemPedido> itens;
 
     public Pedido(LocalDate data, int id, String status) {
         this.data = data;
         this.id = id;
-        Status = status;
+        this.status = status;
+        this.itens = new ArrayList<>();
     }
 
+    public void adicionar(ItemPedido item) {
+        this.itens.add(item);
+    }
+
+    public void mostrarPedido() {
+        System.out.println("Detalhes do Pedido #" + this.id);
+        System.out.println("Status: " + this.status);
+        System.out.println("Itens do Pedido:");
+        for (ItemPedido item : this.itens) {
+            System.out.println("- " + item.getQuantidade() + "x " + item.getItemCardapio().getNome() +
+                    " (R$ " + item.getPrecoUnit() + ")");
+        }
+    }
+
+    // O restante dos seus getters e setters estão corretos aqui.
     public LocalDate getData() {
         return data;
     }
-
-    public void setData(LocalDate data) {
-        this.data = data;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getStatus() {
-        return Status;
-    }
-
-    public void setStatus(String status) {
-        Status = status;
-    }
+    // ...
 }
