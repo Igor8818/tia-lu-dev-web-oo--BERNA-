@@ -1,11 +1,13 @@
-public class Client {
+package Model;
 
-    private static int proximoId = 1;
+public class Cliente {
+
+    private static int proximoId = 1; // Contador estático
     private int id;
     private String nome;
     private String telefone;
 
-    public Client(String nome, String telefone, int id) {
+    public Cliente(String nome, String telefone) {
         this.nome = nome;
         this.telefone = telefone;
         this.id = proximoId;
@@ -16,24 +18,12 @@ public class Client {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public String getNome() {
         return nome;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
     public String getTelefone() {
         return telefone;
-    }
-
-    public void setTelefone(String telefone) {
-        this.telefone = telefone;
     }
 
 }

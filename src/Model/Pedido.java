@@ -1,3 +1,5 @@
+package Model;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -29,9 +31,9 @@ public class Pedido {
         }
     }
 
-    // O restante dos seus getters e setters estão corretos aqui.
+
     public LocalDate getData() {
         return data;
     }
-    // ...
+
 }

@@ -1,4 +1,5 @@
-import java.util.ArrayList;
+package Model;
+
 public class ItemCardapio {
 
     private static int proximoId = 1;
@@ -16,7 +17,6 @@ public class ItemCardapio {
         this.preco = preco;
     }
 
-
     public int getId() {
         return id;
     }
@@ -27,6 +27,10 @@ public class ItemCardapio {
 
     public double getPreco() {
         return preco;
+    }
+
+    public void adicionar(){
+
     }
 
     @Override

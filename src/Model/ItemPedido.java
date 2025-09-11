@@ -1,3 +1,5 @@
+package Model;
+
 public class ItemPedido {
     private ItemCardapio itemCardapio;
     private int quantidade;
@@ -8,7 +10,6 @@ public class ItemPedido {
         this.quantidade = quantidade;
         this.precoUnit = item.getPreco();
     }
-
 
     public ItemCardapio getItemCardapio() {
         return this.itemCardapio;
